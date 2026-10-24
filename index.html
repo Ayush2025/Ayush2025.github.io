@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ayush Yadav — AI Product Engineer & Robotics Builder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Michroma&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#04060f;--ink:#dff9ff;--dim:#8fb2c4;--cy:#35f0ff;--mg:#ff3df2;--vi:#7a5cff;--line:rgba(53,240,255,.28);--glass:rgba(10,24,44,.55)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:500 18px/1.55 Rajdhani,"Segoe UI",system-ui,sans-serif;overflow-x:hidden}
+#gl{position:fixed;inset:0;z-index:0;width:100%;height:100%}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;background:repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 1px,transparent 1px 3px);mix-blend-mode:overlay}
+main,header,footer{position:relative;z-index:2}
+h1,h2,h3{font-family:Michroma,"Eurostile",Verdana,sans-serif;font-weight:400;letter-spacing:.04em}
+a{color:var(--cy);text-decoration:none}
+a:focus-visible,button:focus-visible,video:focus-visible{outline:2px solid var(--mg);outline-offset:3px}
+nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:linear-gradient(#04060fee,#04060f00)}
+nav b{font-family:Michroma,sans-serif;font-weight:400;font-size:14px;letter-spacing:.12em;color:var(--cy);text-shadow:0 0 12px var(--cy)}
+nav div{display:flex;gap:22px;font-size:16px}
+nav div a{color:var(--dim)}nav div a:hover{color:var(--cy);text-shadow:0 0 10px var(--cy)}
+section{padding:110px 5vw 40px;max-width:1280px;margin:auto}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.15fr .85fr;gap:4vw;align-items:center;padding-top:90px}
+.hero h1{font-size:clamp(34px,6vw,84px);line-height:1.04;text-shadow:0 0 28px rgba(53,240,255,.55),3px 0 rgba(255,61,242,.55),-3px 0 rgba(53,240,255,.4);animation:glitch 7s infinite}
+@keyframes glitch{0%,92%,100%{transform:none}93%{transform:translate(4px,-1px) skewX(6deg)}94%{transform:translate(-4px,1px)}95%{transform:none}}
+.role{margin:22px 0 10px;font-size:clamp(18px,2.2vw,26px);color:var(--cy);min-height:1.6em}
+.role::after{content:"▌";animation:blink 1s steps(1) infinite}@keyframes blink{50%{opacity:0}}
+.lead{max-width:56ch;color:var(--dim);font-size:20px}
+.cta{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+.btn{padding:13px 24px;border:1px solid var(--cy);color:var(--cy);background:rgba(53,240,255,.07);clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px);font:600 16px Rajdhani,sans-serif;letter-spacing:.08em;transition:.25s;cursor:pointer}
+.btn:hover{background:var(--cy);color:#001018;box-shadow:0 0 30px var(--cy)}
+.btn.alt{border-color:var(--mg);color:var(--mg);background:rgba(255,61,242,.07)}.btn.alt:hover{background:var(--mg);color:#1a0018;box-shadow:0 0 30px var(--mg)}
+.holo{perspective:1100px;display:grid;place-items:center}
+.pedestal{position:relative;width:min(100%,400px);transform-style:preserve-3d;transition:transform .15s}
+.pedestal .frame{position:relative;border:1px solid var(--cy);background:#001a24;box-shadow:0 0 50px rgba(53,240,255,.35),inset 0 0 40px rgba(53,240,255,.25);overflow:hidden;clip-path:polygon(0 0,calc(100% - 28px) 0,100% 28px,100% 100%,28px 100%,0 calc(100% - 28px))}
+.pedestal img{display:block;width:100%;aspect-ratio:2/3;object-fit:cover;filter:saturate(.9) contrast(1.08) hue-rotate(-8deg);mix-blend-mode:screen;opacity:.95}
+.pedestal .frame::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 0,rgba(53,240,255,.35) 50%,transparent 100%);height:30%;animation:scan 3.6s linear infinite;z-index:2}
+@keyframes scan{from{transform:translateY(-100%)}to{transform:translateY(420%)}}
+.pedestal .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,61,242,.18),transparent 40%,rgba(53,240,255,.2));z-index:1}
+.pedestal .ring{position:absolute;left:-8%;right:-8%;bottom:-34px;height:44px;border-radius:50%;border:2px solid var(--cy);box-shadow:0 0 30px var(--cy),inset 0 0 24px var(--cy);transform:translateZ(-30px) rotateX(72deg)}
+.pedestal .tag{position:absolute;left:-14px;top:18%;transform:translateZ(60px);background:var(--glass);border:1px solid var(--mg);padding:6px 12px;font-size:14px;color:var(--mg);backdrop-filter:blur(6px)}
+.pedestal .tag.b{left:auto;right:-14px;top:auto;bottom:22%;border-color:var(--cy);color:var(--cy)}
+h2{font-size:clamp(22px,3.4vw,40px);margin-bottom:12px;text-shadow:0 0 18px rgba(53,240,255,.5)}
+.sub{color:var(--dim);max-width:62ch;margin-bottom:34px}
+.panel{background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(10px);padding:26px;position:relative;clip-path:polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,18px 100%,0 calc(100% - 18px))}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:center}
+.about img{width:100%;border:1px solid var(--line);box-shadow:0 0 40px rgba(122,92,255,.4)}
+.about p+p{margin-top:14px}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.tilt{transform-style:preserve-3d;transition:transform .12s,box-shadow .3s}
+.tilt:hover{box-shadow:0 0 40px rgba(53,240,255,.35)}
+.card h3{font-size:16px;color:var(--cy);margin-bottom:10px}
+.card ul{list-style:none;color:var(--dim);font-size:17px}
+.card li{padding-left:18px;position:relative;margin:5px 0}
+.card li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border:1px solid var(--mg);transform:rotate(45deg)}
+.card .st{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);color:var(--mg);font-size:15px}
+.card.flag{border-color:var(--mg)}
+.gal{columns:4 230px;column-gap:16px}
+.gal figure{break-inside:avoid;margin-bottom:16px;position:relative;cursor:zoom-in;border:1px solid var(--line);overflow:hidden;background:#001018}
+.gal img{display:block;width:100%;transition:.4s;filter:saturate(.95)}
+.gal figure:hover img{transform:scale(1.05);filter:saturate(1.2) hue-rotate(-10deg)}
+.gal figure::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 30px rgba(53,240,255,.3);pointer-events:none}
+.vids{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:start}
+.vids .wide{grid-column:span 2}
+@media(max-width:760px){.vids .wide{grid-column:auto}}
+.vbox{padding:12px}
+.vbox video{width:100%;display:block;background:#000;max-height:78vh}
+.vbox.tall video{max-height:70vh;margin:auto}
+.vbox p{padding:10px 4px 0;color:var(--dim);font-size:16px}
+.stack{display:flex;flex-wrap:wrap;gap:10px}
+.stack span{border:1px solid var(--line);padding:6px 14px;background:rgba(53,240,255,.05);font-size:16px}
+.stack h3{width:100%;font-size:13px;color:var(--mg);margin-top:16px}
+.contact{text-align:center;padding-bottom:90px}
+.contact h2{font-size:clamp(26px,5vw,56px)}
+footer{text-align:center;padding:24px;color:var(--dim);font-size:14px;border-top:1px solid var(--line)}
+#lb{position:fixed;inset:0;z-index:100;background:rgba(2,4,10,.92);display:none;place-items:center;cursor:zoom-out}
+#lb.on{display:grid}#lb img{max-width:92vw;max-height:90vh;border:1px solid var(--cy);box-shadow:0 0 60px rgba(53,240,255,.5)}
+@media(max-width:860px){.hero,.about{grid-template-columns:1fr}.holo{order:-1}nav div{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+<nav><b>AY // 2026</b><div><a href="#about">Profile</a><a href="#systems">Systems</a><a href="#lab">Robot lab</a><a href="#video">Video bay</a><a href="#stack">Stack</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero" style="max-width:1280px;margin:auto;padding-left:5vw;padding-right:5vw">
+  <div>
+    <h1>Ayush<br>Yadav</h1>
+    <p class="role" id="role" aria-label="AI Product Engineer, Full Stack Architect, Generative AI Specialist"></p>
+    <p class="lead">I build intelligent systems that think, adapt and scale — AI products, real-time vision, and humanoid robots that leave the lab and get used.</p>
+    <div class="cta"><a class="btn" href="#video">Watch the robots move</a><a class="btn alt" href="#contact">Open a channel</a></div>
+  </div>
+  <div class="holo"><div class="pedestal" id="ped">
+    <div class="frame"><img src="assets/img/8828.jpg" alt="Portrait of Ayush Yadav at his desk, a humanoid robot behind him"></div>
+    <span class="tag">AI + Robotics</span><span class="tag b">Patents &amp; copyrights</span>
+    <div class="ring"></div>
+  </div></div>
+</header>
+
+<main>
+<section id="about">
+  <h2>Profile</h2>
+  <p class="sub">AI &amp; machine learning engineer from India, building at the line where software meets hardware.</p>
+  <div class="about">
+    <img class="tilt" src="assets/img/18667.jpg" alt="Ayush standing beside a white service humanoid robot">
+    <div class="panel">
+      <p>I’m a Computer Science Engineering graduate specialising in AI and Machine Learning, now pursuing an M.S. in Computer Science at the University of Colorado Boulder. I ship full-stack AI products — from the model, to the API, to the interface — and I build the robots they run on.</p>
+      <p>My humanoid, VITYouth, does real-time face recognition, anomaly detection and Kinect-based navigation with live multi-user streaming. I hold copyrights and patents across AI and robotics, and I’m a member of ACM and the Space Generation Advisory Council.</p>
+      <p>Open to remote and global roles.</p>
+    </div>
+  </div>
+</section>
+
+<section id="systems">
+  <h2>Systems I’ve shipped</h2>
+  <p class="sub">Products and platforms, built end to end.</p>
+  <div class="grid">
+    <article class="panel card flag tilt"><h3>VITYouth — surveillance humanoid</h3><ul><li>Real-time face recognition and anomaly detection</li><li>Autonomous navigation with Kinect depth sensing and sensor fusion</li><li>Live multi-user video streaming and remote control</li></ul><div class="st">OpenCV · Python · WebSockets · Kinect SDK</div></article>
+    <article class="panel card tilt"><h3>NexFit AI — fitness ecosystem</h3><ul><li>On-device computer vision for posture correction and tracking</li><li>Workout and nutrition recommendation engine</li><li>Live product, full-stack SaaS</li></ul><div class="st">TensorFlow Lite · OpenCV · Node.js · React · MongoDB</div></article>
+    <article class="panel card tilt"><h3>BrainMate AI — learning &amp; support</h3><ul><li>Adaptive AI tutor and emotionally aware chatbot</li><li>Sentiment analysis, interactive simulations</li><li>Backend for real-time concurrent AI sessions</li></ul><div class="st">NLP · FastAPI · React · Firebase · WebSockets</div></article>
+    <article class="panel card tilt"><h3>AI healthcare platform</h3><ul><li>Disease prediction from symptoms</li><li>Doctor booking, medicine ordering, pathology workflows</li><li>Secure authentication and payments</li></ul><div class="st">TensorFlow · Node.js · MongoDB · JWT · Razorpay</div></article>
+    <article class="panel card tilt"><h3>Intelligent video surveillance</h3><ul><li>Anomaly detection with spatial autoencoders</li><li>Real-time and recorded stream processing</li><li>High-throughput Django and MySQL backend</li></ul><div class="st">Spatial autoencoders · Django · MySQL · OpenCV</div></article>
+  </div>
+</section>
+
+<section id="lab">
+  <h2>Robot lab</h2>
+  <p class="sub">Humanoids, quadrupeds, tracked rovers and an electric off-road buggy. Tap any frame to enlarge.</p>
+  <div class="gal" id="gal"></div>
+</section>
+
+<section id="video">
+  <h2>Video bay</h2>
+  <p class="sub">Four recordings from the bench. Press play on any of them — starting one pauses the others.</p>
+  <div class="vids">
+    <div class="panel vbox tall"><video controls playsinline preload="metadata" poster="assets/img/v1.jpg" src="assets/vid/v1.mp4"></video><p>Recording 1</p></div>
+    <div class="panel vbox tall"><video controls playsinline preload="metadata" poster="assets/img/v2.jpg" src="assets/vid/v2.mp4"></video><p>Recording 2</p></div>
+    <div class="panel vbox wide"><video controls playsinline preload="metadata" poster="assets/img/v3.jpg" src="assets/vid/v3.mp4"></video><p>Recording 3 · 10 Oct 2026</p></div>
+    <div class="panel vbox wide"><video controls playsinline preload="metadata" poster="assets/img/v4.jpg" src="assets/vid/v4.mp4"></video><p>Recording 4 · 10 Oct 2026</p></div>
+  </div>
+</section>
+
+<section id="stack">
+  <h2>Stack</h2>
+  <div class="panel"><div class="stack">
+    <h3>AI / ML</h3><span>Generative AI</span><span>RAG pipelines</span><span>NLP</span><span>Computer vision</span><span>TensorFlow &amp; TF Lite</span><span>OpenCV</span><span>LLM APIs (Groq, OpenAI)</span>
+    <h3>Languages</h3><span>Python</span><span>JavaScript</span><span>TypeScript</span><span>Kotlin</span><span>SQL</span>
+    <h3>Web &amp; backend</h3><span>React</span><span>Next.js</span><span>Tailwind</span><span>GSAP</span><span>Node.js</span><span>FastAPI</span><span>WebSockets</span><span>Microservices</span>
+    <h3>Data &amp; cloud</h3><span>MongoDB</span><span>MySQL</span><span>Firestore</span><span>Supabase</span><span>Redis</span><span>Docker</span><span>Vercel</span><span>CI/CD</span>
+  </div></div>
+</section>
+
+<section id="creds">
+  <h2>Credentials</h2>
+  <div class="grid">
+    <div class="panel card"><h3>Education</h3><ul><li>M.S. Computer Science — University of Colorado Boulder</li><li>B.Tech Computer Science Engineering — AI &amp; ML</li></ul></div>
+    <div class="panel card"><h3>Intellectual property</h3><ul><li>Copyrights and patents in AI and robotics</li></ul></div>
+    <div class="panel card"><h3>Memberships &amp; leadership</h3><ul><li>ACM member</li><li>Space Generation Advisory Council member</li><li>Student Secretary, two years</li></ul></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Let’s build something that moves</h2>
+  <p class="sub" style="margin:0 auto 28px">Remote and global roles, collaborations, robotics and AI products.</p>
+  <div class="cta" style="justify-content:center"><a class="btn" href="mailto:yadavayush4239@gmail.com">yadavayush4239@gmail.com</a><a class="btn alt" href="https://github.com/Ayush2025">GitHub</a><a class="btn" href="https://linkedin.com/in/ayush-yadav-183882230">LinkedIn</a></div>
+</section>
+</main>
+<footer>© 2026 Ayush Yadav</footer>
+<div id="lb" role="dialog" aria-label="Image viewer"><img alt=""></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+// typed role
+const roles=["AI Product Engineer","Full Stack Architect","Generative AI Specialist","Robotics Builder"];
+const roleEl=document.getElementById("role");let ri=0,ci=0,del=false;
+function type(){const t=roles[ri];ci+=del?-1:1;roleEl.textContent=t.slice(0,ci);
+ let d=del?35:70;if(!del&&ci===t.length){del=true;d=1400}else if(del&&ci===0){del=false;ri=(ri+1)%roles.length;d=300}setTimeout(type,d)}
+type();
+// gallery
+const imgs=[["18654","Humanoid under test on a mecanum base"],["18652","Service robot fleet"],["18655","Humanoid portrait"],["18648","White service robot"],["18661","Humanoid with hands on hips"],["18659","Quadruped"],["18650","Dual-arm humanoid upper body"],["18660","Selfie with a humanoid"],["18664","Electric off-road buggy"],["18666","Tracked gripper rover with remote"],["18649","Small biped"],["18651","Quadruped and biped"],["18662","Ultrasonic rover"]];
+const gal=document.getElementById("gal");
+imgs.forEach(([n,a])=>{const f=document.createElement("figure"),i=new Image();i.src=`assets/img/${n}.jpg`;i.alt=a;i.loading="lazy";f.append(i);gal.append(f)});
+const lb=document.getElementById("lb"),lbi=lb.querySelector("img");
+gal.addEventListener("click",e=>{if(e.target.tagName==="IMG"){lbi.src=e.target.src;lbi.alt=e.target.alt;lb.classList.add("on")}});
+lb.onclick=()=>lb.classList.remove("on");addEventListener("keydown",e=>e.key==="Escape"&&lb.classList.remove("on"));
+// one video at a time
+const vs=[...document.querySelectorAll("video")];
+vs.forEach(v=>v.addEventListener("play",()=>vs.forEach(o=>o!==v&&o.pause())));
+// 3D tilt
+function tilt(el,max,sel){el.addEventListener("pointermove",e=>{const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform=`rotateY(${x*max}deg) rotateX(${-y*max}deg)`});el.addEventListener("pointerleave",()=>el.style.transform="")}
+tilt(document.getElementById("ped"),22);
+document.querySelectorAll(".tilt").forEach(t=>{t.style.transformPerspective="900px";tilt(t,8)});
+// WebGL hologram background
+if(window.THREE){
+const cv=document.getElementById("gl"),R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});
+R.setPixelRatio(Math.min(devicePixelRatio,2));
+const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(55,1,.1,200);C.position.z=14;
+const cy=0x35f0ff,mg=0xff3df2,vi=0x7a5cff;
+const core=new THREE.Group();S.add(core);
+const ico=new THREE.Mesh(new THREE.IcosahedronGeometry(3,1),new THREE.MeshBasicMaterial({color:cy,wireframe:true,transparent:true,opacity:.5}));
+const inner=new THREE.Mesh(new THREE.OctahedronGeometry(1.6,0),new THREE.MeshBasicMaterial({color:mg,wireframe:true,transparent:true,opacity:.8}));
+core.add(ico,inner);
+const rings=[0,1,2].map(i=>{const m=new THREE.Mesh(new THREE.TorusGeometry(4.2+i*.9,.02,8,120),new THREE.MeshBasicMaterial({color:[cy,mg,vi][i],transparent:true,opacity:.7}));m.rotation.x=1+i*.6;m.rotation.y=i*.5;core.add(m);return m});
+const N=1800,pos=new Float32Array(N*3);for(let i=0;i<N;i++){pos.set([(Math.random()-.5)*70,(Math.random()-.5)*50,(Math.random()-.5)*50-8],i*3)}
+const pg=new THREE.BufferGeometry();pg.setAttribute("position",new THREE.BufferAttribute(pos,3));
+const pts=new THREE.Points(pg,new THREE.PointsMaterial({color:cy,size:.07,transparent:true,opacity:.75}));S.add(pts);
+const grid=new THREE.GridHelper(80,40,mg,vi);grid.position.y=-9;grid.material.transparent=true;grid.material.opacity=.3;S.add(grid);
+let mx=0,my=0,sy=0;addEventListener("pointermove",e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
+addEventListener("scroll",()=>sy=scrollY/Math.max(1,document.body.scrollHeight-innerHeight));
+function size(){R.setSize(innerWidth,innerHeight,false);C.aspect=innerWidth/innerHeight;C.updateProjectionMatrix()}
+addEventListener("resize",size);size();
+const still=matchMedia("(prefers-reduced-motion:reduce)").matches;
+(function loop(t){t*=.001;
+ const wide=innerWidth>860;
+ core.position.x+=((wide?-5.5+sy*11:0)-core.position.x)*.04;
+ core.position.y+=((wide?2:5)-sy*6-core.position.y)*.04;
+ ico.rotation.y=t*.25;ico.rotation.x=t*.12;inner.rotation.y=-t*.6;inner.rotation.z=t*.3;
+ rings.forEach((r,i)=>r.rotation.z=t*(.2+i*.12));
+ core.scale.setScalar(1+Math.sin(t*1.5)*.03+sy*.3);
+ pts.rotation.y=t*.01+mx*.15;grid.position.z=(t*2)%2;
+ C.position.x+=(mx*3-C.position.x)*.05;C.position.y+=(-my*2-C.position.y)*.05;C.lookAt(0,0,0);
+ R.render(S,C);if(!still)requestAnimationFrame(loop)})(0);
+}
+</script>
+</body>
+</html>
