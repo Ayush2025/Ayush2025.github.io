@@ -83,7 +83,7 @@ footer{text-align:center;padding:24px;color:var(--dim);font-size:14px;border-top
 </head>
 <body>
 <canvas id="gl" aria-hidden="true"></canvas>
-<nav><b>AY // 2026</b><div><a href="#about">Profile</a><a href="#systems">Systems</a><a href="#lab">Robot lab</a><a href="#video">Video bay</a><a href="#stack">Stack</a><a href="#contact">Contact</a></div></nav>
+<nav><b>AY // 2026</b><div><a href="#about">Profile</a><a href="#systems">Systems</a><a href="#lab">Robot lab</a><a href="#video">Video bay</a><a href="#complex">Complex systems</a><a href="#stack">Stack</a><a href="#contact">Contact</a></div></nav>
 
 <header class="hero" style="max-width:1280px;margin:auto;padding-left:5vw;padding-right:5vw">
   <div>
@@ -142,13 +142,30 @@ footer{text-align:center;padding:24px;color:var(--dim);font-size:14px;border-top
   </div>
 </section>
 
+<section id="complex">
+  <h2>Complex systems</h2>
+  <p class="sub">Projects where perception, control, hardware and software all have to work together.</p>
+  <div class="grid">
+    <article class="panel card tilt"><h3>Real-time perception &amp; surveillance</h3><ul><li>Face recognition and anomaly detection on live video</li><li>Spatial-autoencoder threat detection on live and recorded streams</li><li>Multi-user streaming and remote control over WebSockets</li></ul></article>
+    <article class="panel card tilt"><h3>Humanoid control &amp; teleoperation</h3><ul><li>Hand-tracking teleoperation of a humanoid</li><li>Kinect gesture control of a NAO robot in Webots</li><li>Servo-driven arms, head and expressive face</li><li>Browser-based 3D exploded-view viewer</li></ul></article>
+    <article class="panel card tilt"><h3>Autonomy &amp; navigation</h3><ul><li>Kinect depth sensing with sensor fusion</li><li>ROS2 and Gazebo simulation workflow</li><li>Mecanum-wheel and tracked mobile bases</li></ul></article>
+    <article class="panel card tilt"><h3>Brain–computer interface</h3><ul><li>EEG-headset control of a robotic arm</li><li>Low-budget signal-to-motion pipeline</li></ul></article>
+    <article class="panel card tilt"><h3>Edge AI &amp; wearables</h3><ul><li>Wrist-worn personal AI companion on Raspberry Pi 5</li><li>On-device vision with TensorFlow Lite</li></ul></article>
+    <article class="panel card tilt"><h3>Rocketry &amp; control</h3><ul><li>Thrust-vector-controlled hopper concept</li><li>Multi-pulse motor and deployable legs for powered landing</li></ul></article>
+    <article class="panel card tilt"><h3>AI SaaS architecture</h3><ul><li>RAG pipelines and LLM orchestration</li><li>Auth, payments and role-based access</li><li>Redis caching and microservice design</li></ul></article>
+    <article class="panel card tilt"><h3>Industrial &amp; apps</h3><ul><li>Cell-based manufacturing tracker for production monitoring (MERN)</li><li>Physics-based building game for Android</li><li>CBSE-aligned adaptive learning platform</li></ul></article>
+  </div>
+</section>
 <section id="stack">
   <h2>Stack</h2>
   <div class="panel"><div class="stack">
-    <h3>AI / ML</h3><span>Generative AI</span><span>RAG pipelines</span><span>NLP</span><span>Computer vision</span><span>TensorFlow &amp; TF Lite</span><span>OpenCV</span><span>LLM APIs (Groq, OpenAI)</span>
-    <h3>Languages</h3><span>Python</span><span>JavaScript</span><span>TypeScript</span><span>Kotlin</span><span>SQL</span>
-    <h3>Web &amp; backend</h3><span>React</span><span>Next.js</span><span>Tailwind</span><span>GSAP</span><span>Node.js</span><span>FastAPI</span><span>WebSockets</span><span>Microservices</span>
-    <h3>Data &amp; cloud</h3><span>MongoDB</span><span>MySQL</span><span>Firestore</span><span>Supabase</span><span>Redis</span><span>Docker</span><span>Vercel</span><span>CI/CD</span>
+    <h3>AI / ML</h3><span>Generative AI</span><span>RAG pipelines</span><span>LLM integration (Groq, OpenAI)</span><span>Prompt engineering</span><span>NLP</span><span>Sentiment analysis</span><span>Computer vision</span><span>Face recognition</span><span>Anomaly detection</span><span>Spatial autoencoders</span><span>Pose estimation</span><span>TensorFlow &amp; TF Lite</span><span>OpenCV</span><span>Model optimisation</span>
+    <h3>Languages</h3><span>Python</span><span>C++</span><span>C</span><span>JavaScript</span><span>TypeScript</span><span>Kotlin</span><span>SQL</span><span>Bash</span><span>HTML &amp; CSS</span>
+    <h3>Robotics &amp; simulation</h3><span>ROS2</span><span>Gazebo</span><span>Webots</span><span>Kinect SDK</span><span>Sensor fusion</span><span>Depth sensing</span><span>Teleoperation</span><span>Gesture control</span><span>Servo &amp; motor control</span><span>Inverse kinematics</span><span>Mecanum drive</span><span>Humanoid design</span>
+    <h3>Embedded &amp; hardware</h3><span>Raspberry Pi 5</span><span>Arduino</span><span>Microcontrollers</span><span>Custom PCBs</span><span>Bluetooth &amp; RF links</span><span>Ultrasonic sensing</span><span>EEG signal capture</span><span>3D printing</span><span>CAD</span><span>Motor drivers</span><span>Battery &amp; power systems</span>
+    <h3>Web &amp; backend</h3><span>React</span><span>Next.js</span><span>Tailwind</span><span>GSAP</span><span>Framer Motion</span><span>Three.js</span><span>Vite</span><span>Node.js</span><span>Express</span><span>Django</span><span>FastAPI</span><span>REST APIs</span><span>WebSockets</span><span>Microservices</span><span>MERN stack</span>
+    <h3>Data &amp; cloud</h3><span>MongoDB</span><span>MySQL</span><span>Firestore</span><span>Supabase</span><span>Redis</span><span>Docker</span><span>Linux</span><span>Vercel</span><span>Railway</span><span>Render</span><span>Firebase Hosting</span><span>CI/CD</span><span>Git &amp; GitHub</span>
+    <h3>Auth, payments &amp; tools</h3><span>Firebase Auth</span><span>JWT</span><span>OAuth</span><span>Razorpay</span><span>Postman</span><span>Figma</span><span>VS Code</span><span>Cursor AI</span><span>Replit</span>
   </div></div>
 </section>
 
